@@ -1,6 +1,8 @@
 .wbdv-sticky-top {
   position: fixed;
   width: 100%;
+  height: 50px;
+  white-space: nowrap;
   background-color: #3B5998;
   z-index: 1;
 }
@@ -20,7 +22,7 @@
 
 .wbdv-course-list-title-row {
   position: fixed;
-  background-color: #c6c8ca;
+  background-color: #ebeced;
   width: 100%;
   box-shadow: 2px 2px 3px #999;
   z-index: 2;
@@ -31,7 +33,7 @@
   border: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .wbdv-hide-on-minimize {
     display: none;
   }
@@ -60,9 +62,14 @@
 
 .wbdv-course-content {
   background-color: #ebeced;
+  padding-top: 50px;
 }
 
 .wbdv-content {
   overflow-x: hidden;
+  background-color: #ebeced;
+}
+
+.list-group-item-dark{
   background-color: #ebeced;
 }
