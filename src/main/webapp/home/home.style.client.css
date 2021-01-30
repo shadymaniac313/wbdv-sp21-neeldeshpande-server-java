@@ -9,7 +9,7 @@
   padding: 5px;
 }
 
-.wbdv-padding-left-20percent{
+.wbdv-padding-left-20percent {
   padding-left: 20%;
 }
 
@@ -19,6 +19,7 @@
 }
 
 .wbdv-course-list-title-row {
+  position: fixed;
   background-color: #c6c8ca;
   width: 100%;
   box-shadow: 2px 2px 3px #999;
@@ -36,27 +37,32 @@
   }
 }
 
-.wbdv-home-list-tile{
+.wbdv-home-list-tile {
   border: none !important;
 }
 
-.float{
-  position:fixed;
-  width:60px;
-  height:60px;
-  bottom:40px;
-  right:40px;
-  background-color:#0C9;
-  color:#FFF;
-  border-radius:50px;
-  text-align:center;
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #3B5998;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
   box-shadow: 2px 2px 3px #999;
 }
 
-.my-float{
-  margin-top:22px;
+.wbdv-add-icon-float {
+  margin-top: 22px;
 }
 
-.wbdv-content{
+.wbdv-course-content {
+  background-color: #ebeced;
+}
+
+.wbdv-content {
   overflow-x: hidden;
+  background-color: #ebeced;
 }
