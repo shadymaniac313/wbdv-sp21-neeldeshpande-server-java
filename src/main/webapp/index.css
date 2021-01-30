@@ -1,0 +1,11 @@
+.container {
+  margin-top: 20%;
+}
+
+.content-table {
+  width: 100%;
+}
+
+.content-table > tbody > tr > td, h1 {
+  text-align: center;
+}
