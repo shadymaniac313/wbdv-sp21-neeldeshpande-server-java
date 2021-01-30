@@ -1,241 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        rel="stylesheet"/>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet"/>
   <link href="home.style.client.css" rel="stylesheet"/>
   <meta charset="UTF-8">
   <title>Title</title>
 </head>
-<body>
+<body class="wbdv-content">
 <div class="wbdv-sticky-top wbdv-padding-5px">
   <div class="row">
     <div class="col-1">
-      <i class="fa fa-bars fa-2x wbdv-sticky-top-content"></i>
+      <i class="fa fa-bars fa-2x wbdv-sticky-top-content wbdv-padding-left-20percent"></i>
     </div>
-    <div class="col-2">
+    <div class="col-2 wbdv-hide-on-minimize">
       <h4 class="wbdv-sticky-top-content">Dashboard</h4>
     </div>
     <div class="col-8">
-      <input class="form-control wbdv-course-searchbar"/>
+      <input class="form-control wbdv-course-searchbar" placeholder="New Course Title"/>
     </div>
     <div class="col-1">
-      <i class="fa fa-plus fa-2x wbdv-sticky-top-content"></i>
+      <i class="fa fa-plus-circle fa-2x wbdv-sticky-top-content"></i>
     </div>
   </div>
 </div>
 <br/>
 <br/>
 
-<div class="row wbdv-course-list-title-row">
-  <div class="col-5">
-    Title
-  </div>
-  <div class="col-3">
-    Owned by
-    <i class="fa fa-sort-up"></i>
-  </div>
-  <div class="col-3">
-    Last modified
-  </div>
-  <div class="col-1">
-    <i class="fa fa-th"></i>
-    <i class="fa fa-sort"></i>
-  </div>
+<div class="row">
+
+  <ul class="list-group wbdv-course-list-title-row">
+    <div class="container">
+      <li class="list-group-item list-group-item-dark wbdv-home-list-tile">
+        <div class="row">
+          <div class="col-5">
+            Title
+          </div>
+          <div class="col-3">
+            Owned by
+            <i class="fa fa-sort-up"></i>
+          </div>
+          <div class="col-3">
+            Last modified
+          </div>
+          <div class="col-1">
+            <i class="fa fa-th"></i>
+            <i class="fa fa-sort"></i>
+          </div>
+        </div>
+      </li>
+    </div>
+  </ul>
+
 </div>
 <div class="container">
-
-  <div class="row">
-    <div class="col-5">
-      <a href="../course-editor/editor.html">
-        <i class="fa fa-file"></i>
-        CS4550
-      </a>
-    </div>
-    <div class="col-3">
-      me
-    </div>
-    <div class="col-3">
-      1/1/2021
-    </div>
-    <div class="col-1">
-      <i class="fa fa-trash"></i>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-5">
-      <a href="../course-editor/editor.html">
-        <i class="fa fa-file"></i>
-        CS3200
-      </a>
-    </div>
-    <div class="col-3">
-      me
-    </div>
-    <div class="col-3">
-      1/1/2021
-    </div>
-    <div class="col-1">
-      <i class="fa fa-trash"></i>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-5">
-      <a href="../course-editor/editor.html">
-        <i class="fa fa-file"></i>
-        CS5610
-      </a>
-    </div>
-    <div class="col-3">
-      me
-    </div>
-    <div class="col-3">
-      1/1/2021
-    </div>
-    <div class="col-1">
-      <i class="fa fa-trash"></i>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-5">
-      <a href="../course-editor/editor.html">
-        <i class="fa fa-file"></i>
-        CS1234
-      </a>
-    </div>
-    <div class="col-3">
-      me
-    </div>
-    <div class="col-3">
-      1/1/2021
-    </div>
-    <div class="col-1">
-      <i class="fa fa-trash"></i>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-5">
-      <a href="../course-editor/editor.html">
-        <i class="fa fa-file"></i>
-        CS2345
-      </a>
-    </div>
-    <div class="col-3">
-      me
-    </div>
-    <div class="col-3">
-      1/1/2021
-    </div>
-    <div class="col-1">
-      <i class="fa fa-trash"></i>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-5">
-      <a href="../course-editor/editor.html">
-        <i class="fa fa-file"></i>
-        CS3456
-      </a>
-    </div>
-    <div class="col-3">
-      me
-    </div>
-    <div class="col-3">
-      1/1/2021
-    </div>
-    <div class="col-1">
-      <i class="fa fa-trash"></i>
-    </div>
-  </div>
-
+  <ul class="list-group">
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-5">
+          <a href="../course-editor/editor.html">
+            <i class="fa fa-file"></i>
+            CS4550
+          </a>
+        </div>
+        <div class="col-3">
+          me
+        </div>
+        <div class="col-3">
+          1/1/2021
+        </div>
+        <div class="col-1">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-5">
+          <a href="../course-editor/editor.html">
+            <i class="fa fa-file"></i>
+            CS3200
+          </a>
+        </div>
+        <div class="col-3">
+          me
+        </div>
+        <div class="col-3">
+          1/1/2021
+        </div>
+        <div class="col-1">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-5">
+          <a href="../course-editor/editor.html">
+            <i class="fa fa-file"></i>
+            CS5610
+          </a>
+        </div>
+        <div class="col-3">
+          me
+        </div>
+        <div class="col-3">
+          1/1/2021
+        </div>
+        <div class="col-1">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-5">
+          <a href="../course-editor/editor.html">
+            <i class="fa fa-file"></i>
+            CS1234
+          </a>
+        </div>
+        <div class="col-3">
+          me
+        </div>
+        <div class="col-3">
+          1/1/2021
+        </div>
+        <div class="col-1">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-5">
+          <a href="../course-editor/editor.html">
+            <i class="fa fa-file"></i>
+            CS2345
+          </a>
+        </div>
+        <div class="col-3">
+          me
+        </div>
+        <div class="col-3">
+          1/1/2021
+        </div>
+        <div class="col-1">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-5">
+          <a href="../course-editor/editor.html">
+            <i class="fa fa-file"></i>
+            CS3456
+          </a>
+        </div>
+        <div class="col-3">
+          me
+        </div>
+        <div class="col-3">
+          1/1/2021
+        </div>
+        <div class="col-1">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </li>
+  </ul>
   <br/>
   <h4>Yesterday</h4>
-  <div class="row">
-    <div class="col-5">
-      <a href="../course-editor/editor.html">
-        <i class="fa fa-file"></i>
-        CS3456
-      </a>
-    </div>
-    <div class="col-3">
-      me
-    </div>
-    <div class="col-3">
-      1/1/2021
-    </div>
-    <div class="col-1">
-      <i class="fa fa-trash"></i>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-5">
-      <a href="../course-editor/editor.html">
-        <i class="fa fa-file"></i>
-        CS3456
-      </a>
-    </div>
-    <div class="col-3">
-      me
-    </div>
-    <div class="col-3">
-      1/1/2021
-    </div>
-    <div class="col-1">
-      <i class="fa fa-trash"></i>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-5">
-      <a href="../course-editor/editor.html">
-        <i class="fa fa-file"></i>
-        CS3456
-      </a>
-    </div>
-    <div class="col-3">
-      me
-    </div>
-    <div class="col-3">
-      1/1/2021
-    </div>
-    <div class="col-1">
-      <i class="fa fa-trash"></i>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-5">
-      <a href="../course-editor/editor.html">
-        <i class="fa fa-file"></i>
-        CS3456
-      </a>
-    </div>
-    <div class="col-3">
-      me
-    </div>
-    <div class="col-3">
-      1/1/2021
-    </div>
-    <div class="col-1">
-      <i class="fa fa-trash"></i>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-5">
-      <a href="../course-editor/editor.html">
-        <i class="fa fa-file"></i>
-        CS3456
-      </a>
-    </div>
-    <div class="col-3">
-      me
-    </div>
-    <div class="col-3">
-      1/1/2021
-    </div>
-    <div class="col-1">
-      <i class="fa fa-trash"></i>
-    </div>
-  </div>
-
+  <ul class="list-group">
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-5">
+          <a href="../course-editor/editor.html">
+            <i class="fa fa-file"></i>
+            CS3456
+          </a>
+        </div>
+        <div class="col-3">
+          me
+        </div>
+        <div class="col-3">
+          1/1/2021
+        </div>
+        <div class="col-1">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-5">
+          <a href="../course-editor/editor.html">
+            <i class="fa fa-file"></i>
+            CS3456
+          </a>
+        </div>
+        <div class="col-3">
+          me
+        </div>
+        <div class="col-3">
+          1/1/2021
+        </div>
+        <div class="col-1">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-5">
+          <a href="../course-editor/editor.html">
+            <i class="fa fa-file"></i>
+            CS3456
+          </a>
+        </div>
+        <div class="col-3">
+          me
+        </div>
+        <div class="col-3">
+          1/1/2021
+        </div>
+        <div class="col-1">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-5">
+          <a href="../course-editor/editor.html">
+            <i class="fa fa-file"></i>
+            CS3456
+          </a>
+        </div>
+        <div class="col-3">
+          me
+        </div>
+        <div class="col-3">
+          1/1/2021
+        </div>
+        <div class="col-1">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-5">
+          <a href="../course-editor/editor.html">
+            <i class="fa fa-file"></i>
+            CS3456
+          </a>
+        </div>
+        <div class="col-3">
+          me
+        </div>
+        <div class="col-3">
+          1/1/2021
+        </div>
+        <div class="col-1">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
+<a href="#" class="float">
+  <i class="fa fa-plus my-float"></i>
+</a>
 </body>
 </html>

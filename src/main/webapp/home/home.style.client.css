@@ -9,16 +9,54 @@
   padding: 5px;
 }
 
-.wbdv-sticky-top-content{
+.wbdv-padding-left-20percent{
+  padding-left: 20%;
+}
+
+.wbdv-sticky-top-content {
   color: white;
+  vertical-align: -webkit-baseline-middle;
 }
 
-.wbdv-course-list-title-row{
-  background-color: #cacfcc;
-  height: 40px;
+.wbdv-course-list-title-row {
+  background-color: #c6c8ca;
+  width: 100%;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 2;
 }
 
-.wbdv-course-searchbar{
+.wbdv-course-searchbar {
   background-color: white;
   border: none;
+}
+
+@media screen and (max-width: 600px) {
+  .wbdv-hide-on-minimize {
+    display: none;
+  }
+}
+
+.wbdv-home-list-tile{
+  border: none !important;
+}
+
+.float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  background-color:#0C9;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+  margin-top:22px;
+}
+
+.wbdv-content{
+  overflow-x: hidden;
 }
