@@ -1,0 +1,25 @@
+#wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.wbdv-sticky-top {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  white-space: nowrap;
+  background-color: #3B5998;
+  z-index: 1;
+}
+
+.wbdv-sticky-left-pane {
+  height: 100%;
+  float: left;
+  position: fixed;
+  background-color: rebeccapurple;
+  width: 20%;
+}
+
+.wbdv-module-list {
+  padding-top: 50px;
+}
