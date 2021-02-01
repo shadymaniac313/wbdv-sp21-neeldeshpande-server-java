@@ -49,7 +49,7 @@
   height: 60px;
   bottom: 40px;
   right: 40px;
-  background-color: #3B5998;
+  background-color: #4287f5;
   color: #FFF;
   border-radius: 50px;
   text-align: center;
@@ -57,7 +57,7 @@
 }
 
 .wbdv-add-icon-float {
-  margin-top: 22px;
+  margin-top: 15px;
 }
 
 .wbdv-course-content {
@@ -72,4 +72,8 @@
 
 .list-group-item-dark{
   background-color: #ebeced;
+}
+
+.wbdv-home-title{
+  font-weight: lighter;
 }
