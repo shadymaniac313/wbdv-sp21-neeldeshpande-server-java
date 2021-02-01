@@ -83,8 +83,18 @@
   background-color: #223661 !important;
   color: white;
   font-weight: lighter;
+  margin-top: 5%;
 }
 
 .wbdv-list-delete-icon {
   margin-top: 0.3rem;
+}
+
+.wbdv-group-item-add {
+  background-color: #3B5998 !important;
+}
+
+.wbdv-editor-nav-pills {
+  margin-top: 1.0rem;
+  background-color: #3b5998;
 }
