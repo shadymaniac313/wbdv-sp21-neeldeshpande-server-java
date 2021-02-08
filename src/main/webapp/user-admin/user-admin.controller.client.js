@@ -12,6 +12,16 @@ function renderUsers(users) {
         <td>${user.username}</td>
         <td>${user.username}</td>
         <td>${user.username}</td>
+        <td>
+          <div class="row">
+            <div class="col-6">
+              <i class="fas fa-times"></i>
+            </div>
+            <div class="col">
+              <i class="fas fa-pen"></i>
+            </div>
+          </div>
+        </td>
     </tr>
     `)
   }
