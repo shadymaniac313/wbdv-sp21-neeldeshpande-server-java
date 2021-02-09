@@ -2,6 +2,7 @@ function UserServiceClient() {
   this.fetchUsers = fetchUsers;
   this.createUser = createUser;
   this.deleteUser = deleteUser;
+  this.updateUser = updateUser;
   const self = this;
   this.url = 'https://wbdv-generic-server.herokuapp.com/api/001327792/users';
 
@@ -20,6 +21,18 @@ function UserServiceClient() {
   function deleteUser(id) {
     return fetch(`${self.url}/${id}`, {
       method: 'DELETE'
+    })
+  }
+
+  function updateUser(userId, user) {
+    return fetch(`${self.url}/${userId}`, {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(user)
+    }).then(function (updatedUser) {
+      return updatedUser.json();
     })
   }
 

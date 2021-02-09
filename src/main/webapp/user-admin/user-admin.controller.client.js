@@ -6,6 +6,7 @@ let $lastNameFld;
 let $roleSelect;
 let $createBtn;
 let $deleteBtn;
+let $updateBtn;
 let users = [];
 // const self = this;
 const userService = new UserServiceClient();
@@ -39,6 +40,32 @@ function deleteUser(event) {
   })
 }
 
+function updateUser() {
+  selectedUser.username = $usernameFld.val();
+  selectedUser.password = $pwdFld.val();
+  selectedUser.firstname = $firstNameFld.val();
+  selectedUser.lastname = $lastNameFld.val();
+  selectedUser.role = $roleSelect.val();
+  userService.updateUser(selectedUser._id, selectedUser).then(
+      function (status) {
+        const index = users.findIndex(user => user._id === selectedUser._id);
+        users[index] = selectedUser;
+        renderUsers(users);
+      })
+}
+
+var selectedUser = null;
+function selectUser(event) {
+  const selectBtn = $(event.target);
+  const theId = selectBtn.attr("id");
+  selectedUser = users.find(user => user._id === theId);
+  $usernameFld.val(selectedUser.username);
+  $pwdFld.val(selectedUser.password);
+  $firstNameFld.val(selectedUser.firstname);
+  $lastNameFld.val(selectedUser.lastname);
+  $roleSelect.val(selectedUser.role);
+}
+
 function renderUsers(users) {
   $theTableBody.empty();
   for (let i = 0; i < users.length; i++) {
@@ -56,7 +83,7 @@ function renderUsers(users) {
               <button class="fas fa-times wbdv-useradmin-delete-user" id="${i}"></button>
             </div>
             <div class="col">
-              <button class="fas fa-pen" id="${user._id}"></button>
+              <button class="fas fa-pen wbdv-useradmin-select-user" id="${user._id}"></button>
             </div>
           </div>
         </td>
@@ -64,6 +91,7 @@ function renderUsers(users) {
     `)
   }
   $(".wbdv-useradmin-delete-user").click(deleteUser);
+  $(".wbdv-useradmin-select-user").click(selectUser);
 }
 
 function init() {
@@ -75,11 +103,14 @@ function init() {
   $theTableBody = jQuery("tbody");
   $createBtn = $(".wbdv-useradmin-create-btn");
   $deleteBtn = $(".wbdv-useradmin-delete-user");
+  $updateBtn = $(".wbdv-useradmin-edit-btn");
 
   userService.fetchUsers().then(function (fetchedUsers) {
     users = fetchedUsers;
     renderUsers(users)
   });
+
+  $updateBtn.click(updateUser);
 
   $createBtn.click(() => createUser({
     username: $usernameFld.val(),
@@ -88,7 +119,6 @@ function init() {
     lastname: $lastNameFld.val(),
     role: $roleSelect.val()
   }))
-
 
 }
 
