@@ -7,7 +7,9 @@ let $roleSelect;
 let $createBtn;
 let $deleteBtn;
 let $updateBtn;
+let $searchBtn;
 let users = [];
+let selectedUser;
 // const self = this;
 const userService = new UserServiceClient();
 
@@ -54,7 +56,7 @@ function updateUser() {
       })
 }
 
-var selectedUser = null;
+selectedUser = null;
 function selectUser(event) {
   const selectBtn = $(event.target);
   const theId = selectBtn.attr("id");
@@ -64,6 +66,15 @@ function selectUser(event) {
   $firstNameFld.val(selectedUser.firstname);
   $lastNameFld.val(selectedUser.lastname);
   $roleSelect.val(selectedUser.role);
+  $searchBtn.id = selectedUser._id;
+}
+
+function findUserById() {
+  const userId = $searchBtn.id;
+  userService.findUserById(userId).then(function (foundUser) {
+    users = [foundUser];
+    renderUsers(users);
+  })
 }
 
 function renderUsers(users) {
@@ -104,13 +115,15 @@ function init() {
   $createBtn = $(".wbdv-useradmin-create-btn");
   $deleteBtn = $(".wbdv-useradmin-delete-user");
   $updateBtn = $(".wbdv-useradmin-edit-btn");
+  $searchBtn = $(".wbdv-useradmin-search-btn");
 
-  userService.fetchUsers().then(function (fetchedUsers) {
+  userService.findAllUsers().then(function (fetchedUsers) {
     users = fetchedUsers;
     renderUsers(users)
   });
 
   $updateBtn.click(updateUser);
+  $searchBtn.click(findUserById);
 
   $createBtn.click(() => createUser({
     username: $usernameFld.val(),
