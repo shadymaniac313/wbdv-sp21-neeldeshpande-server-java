@@ -53,7 +53,12 @@ function updateUser() {
         const index = users.findIndex(user => user._id === selectedUser._id);
         users[index] = selectedUser;
         renderUsers(users);
-      })
+      });
+  $usernameFld.val("");
+  $pwdFld.val("");
+  $firstNameFld.val("");
+  $lastNameFld.val("");
+  $roleSelect.val("");
 }
 
 selectedUser = null;
@@ -75,6 +80,13 @@ function findUserById() {
     users = [foundUser];
     renderUsers(users);
   })
+}
+
+function findAllUsers() {
+  userService.findAllUsers().then(function (fetchedUsers) {
+    users = fetchedUsers;
+    return users;
+  });
 }
 
 function renderUsers(users) {
@@ -121,6 +133,10 @@ function init() {
     users = fetchedUsers;
     renderUsers(users)
   });
+
+  // findAllUsers(function (fetchedUsers) {
+  //   renderUsers(fetchedUsers);
+  // });
 
   $updateBtn.click(updateUser);
   $searchBtn.click(findUserById);
