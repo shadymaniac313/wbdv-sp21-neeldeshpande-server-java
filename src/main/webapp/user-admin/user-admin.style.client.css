@@ -1,0 +1,12 @@
+.wbdv-useradmin-search-btn, .wbdv-useradmin-select-user, .wbdv-useradmin-edit-btn, .wbdv-useradmin-delete-user, .wbdv-useradmin-create-btn {
+  border: none;
+  background: none;
+}
+
+.center {
+  text-align: center;
+}
+
+/*table > tbody > tr > td, table > thead > tr > th {*/
+/*  text-align: center;*/
+/*}*/

@@ -22,19 +22,29 @@
     <thead>
     <tr>
       <th>
-        Username
+        <label for="username-input">
+          Username
+        </label>
       </th>
       <th>
-        Password
+        <label for="password-input">
+          Password
+        </label>
       </th>
       <th>
-        First Name
+        <label for="firstname-input">
+          First Name
+        </label>
       </th>
       <th>
-        Last Name
+        <label for="lastname-input">
+          Last Name
+        </label>
       </th>
       <th>
-        Role
+        <label for="role-input">
+          Role
+        </label>
       </th>
       <th>
         Action
@@ -42,47 +52,45 @@
     </tr>
     <tr>
       <th>
-        <input class="form-control wbdv-useradmin-input-username" type="text"
+        <input id="username-input" class="form-control wbdv-useradmin-input-username" type="text"
                placeholder="maryjane"/>
       </th>
       <th>
-        <input class="form-control wbdv-useradmin-input-password" type="text" placeholder="pwd@mj"/>
+        <input id="password-input" class="form-control wbdv-useradmin-input-password"
+               type="password"
+               placeholder="pwd@mj"/>
       </th>
       <th>
-        <input class="form-control wbdv-useradmin-input-firstname" type="text" placeholder="mary"/>
+        <input id="firstname-input" class="form-control wbdv-useradmin-input-firstname" type="text"
+               placeholder="mary"/>
       </th>
       <th>
-        <input class="form-control wbdv-useradmin-input-lastname" type="text" placeholder="jane"/>
+        <input id="lastname-input" class="form-control wbdv-useradmin-input-lastname" type="text"
+               placeholder="jane"/>
       </th>
       <th>
-        <select class="form-control wbdv-useradmin-input-role">
-          <option selected="selected">Faculty</option>
-          <option>Student</option>
+        <select id="role-input" class="form-control wbdv-useradmin-input-role">
+          <option value="FACULTY">Faculty</option>
+          <option value="STUDENT">Student</option>
+          <option value="STAFF">Staff</option>
         </select>
       </th>
       <th>
         <div class="row">
-          <div class="col-4">
+          <div class="col-4 center">
             <button class="fa fa-search wbdv-useradmin-search-btn"></button>
           </div>
-          <div class="col-4">
-              <button class="fa fa-plus wbdv-useradmin-create-btn"></button>
+          <div class="col-4 center">
+            <button class="fa fa-plus wbdv-useradmin-create-btn"></button>
           </div>
-          <div class="col-4">
+          <div class="col-4 center">
             <button class="fas fa-check wbdv-useradmin-edit-btn"></button>
           </div>
         </div>
       </th>
     </tr>
     </thead>
-    <tbody id="theTableBody">
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
+    <tbody id="wbdv-useradmin-table">
     </tbody>
   </table>
 </div>

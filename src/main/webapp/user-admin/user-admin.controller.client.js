@@ -23,10 +23,22 @@ function addUser() {
   })
 }
 
+function clearInputFields() {
+  $usernameFld.val("");
+  $pwdFld.val("");
+  $firstNameFld.val("");
+  $lastNameFld.val("");
+//   $roleSelect.find('option[value="STUDENT"]').attr("selected", true);
+//   $roleSelect.find('option[value="FACULTY"]').removeAttr("selected");
+//   $roleSelect.find('option[value="STAFF"]').removeAttr("selected");
+  $roleSelect.prop('selectedIndex', 2);
+}
+
 function createUser(user) {
   return userService.createUser(user).then(function (createdUser) {
     users.push(createdUser);
     renderUsers(users);
+    clearInputFields();
   })
 }
 
@@ -54,11 +66,7 @@ function updateUser() {
         users[index] = selectedUser;
         renderUsers(users);
       });
-  $usernameFld.val("");
-  $pwdFld.val("");
-  $firstNameFld.val("");
-  $lastNameFld.val("");
-  $roleSelect.val("");
+  clearInputFields();
 }
 
 selectedUser = null;
@@ -91,9 +99,10 @@ function findAllUsers() {
 
 function renderUsers(users) {
   $theTableBody.empty();
+  $roleSelect.find('option[value="STUDENT"]').attr("selected", true);
   for (let i = 0; i < users.length; i++) {
     const user = users[i];
-    $theTableBody.prepend(`
+    $theTableBody.append(`
       <tr>
         <td>${user.username}</td>
         <td>${user.password}</td>
@@ -102,10 +111,10 @@ function renderUsers(users) {
         <td>${user.role}</td>
         <td>
           <div class="row">
-            <div class="col-6">
+            <div class="col-6 center">
               <button class="fas fa-times wbdv-useradmin-delete-user" id="${i}"></button>
             </div>
-            <div class="col">
+            <div class="col center">
               <button class="fas fa-pen wbdv-useradmin-select-user" id="${user._id}"></button>
             </div>
           </div>
@@ -117,7 +126,7 @@ function renderUsers(users) {
   $(".wbdv-useradmin-select-user").click(selectUser);
 }
 
-function init() {
+function main() {
   $usernameFld = $(".wbdv-useradmin-input-username");
   $pwdFld = $(".wbdv-useradmin-input-password");
   $firstNameFld = $(".wbdv-useradmin-input-firstname");
@@ -151,4 +160,4 @@ function init() {
 
 }
 
-jQuery(init);
+jQuery(main);
