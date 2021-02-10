@@ -31,7 +31,7 @@ function clearInputFields() {
 //   $roleSelect.find('option[value="STUDENT"]').attr("selected", true);
 //   $roleSelect.find('option[value="FACULTY"]').removeAttr("selected");
 //   $roleSelect.find('option[value="STAFF"]').removeAttr("selected");
-  $roleSelect.prop('selectedIndex', 2);
+  $roleSelect.prop('selectedIndex', 0);
 }
 
 function createUser(user) {
@@ -99,7 +99,7 @@ function findAllUsers() {
 
 function renderUsers(users) {
   $theTableBody.empty();
-  $roleSelect.find('option[value="STUDENT"]').attr("selected", true);
+  // $roleSelect.find('option[value="STUDENT"]').attr("selected", true);
   for (let i = 0; i < users.length; i++) {
     const user = users[i];
     $theTableBody.append(`
