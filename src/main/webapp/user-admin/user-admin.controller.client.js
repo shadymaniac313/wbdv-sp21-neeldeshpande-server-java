@@ -105,7 +105,7 @@ function renderUsers(users) {
     $theTableBody.append(`
       <tr>
         <td>${user.username}</td>
-        <td>${user.password}</td>
+        <td>&nbsp;</td>
         <td>${user.firstname}</td>
         <td>${user.lastname}</td>
         <td>${user.role}</td>
